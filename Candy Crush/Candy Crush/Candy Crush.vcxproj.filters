@@ -16,6 +16,12 @@
     <ClCompile Include="ModuleInput.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
+    <ClCompile Include="Fruit.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleRenderer.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Modules">
@@ -26,6 +32,9 @@
     </Filter>
     <Filter Include="Main">
       <UniqueIdentifier>{18582e73-c875-475b-9997-52ee53ac3dd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{4b591835-79de-455f-8bc6-fea98c7d79a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +54,12 @@
       <Filter>Main</Filter>
     </ClInclude>
     <ClInclude Include="ModuleInput.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Fruit.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleRenderer.h">
       <Filter>Modules</Filter>
     </ClInclude>
   </ItemGroup>

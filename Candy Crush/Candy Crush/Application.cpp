@@ -2,14 +2,17 @@
 #include "ModuleWindow.h"
 #include "ModuleResources.h"
 #include "ModuleInput.h"
+#include "ModuleRenderer.h"
 
 #include "Application.h"
 
 
 Application::Application()
 {
-	modules.push_back(resources = new ModuleResources());
 	modules.push_back(window = new ModuleWindow());
+	modules.push_back(renderer = new ModuleRenderer());
+	modules.push_back(resources = new ModuleResources());
+
 	modules.push_back(input = new ModuleInput());
 
 }

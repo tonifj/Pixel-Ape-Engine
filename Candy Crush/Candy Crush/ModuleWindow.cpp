@@ -41,7 +41,7 @@ bool ModuleWindow::Init()
 			SDL_FillRect(window_surface, NULL, SDL_MapRGB(window_surface->format, 0xFF, 0xFF, 0xFF));
 
 			//Update the surface
-			SDL_BlitSurface(App->resources->GetPNG("png_test"), NULL, window_surface, NULL);
+			//SDL_BlitSurface(App->resources->GetPNG("png_test"), NULL, window_surface, NULL);
 			SDL_UpdateWindowSurface(window);
 
 		}
@@ -62,7 +62,7 @@ update_status ModuleWindow::Update() {
 update_status ModuleWindow::PostUpdate() {
 	//Update the surface
 	
-	SDL_UpdateWindowSurface(window);
+	//SDL_UpdateWindowSurface(window);
 	return update_status::UPDATE_CONTINUE;
 }
 
@@ -78,6 +78,11 @@ bool ModuleWindow::CleanUp() {
 	SDL_Quit();
 	return true;
 
+}
+
+SDL_Window* ModuleWindow::GetWindow()
+{
+	return window;
 }
 
 

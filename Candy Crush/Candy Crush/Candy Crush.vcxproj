@@ -129,16 +129,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ModuleInput.cpp" />
+    <ClCompile Include="ModuleRenderer.cpp" />
     <ClCompile Include="ModuleResources.cpp" />
     <ClCompile Include="ModuleWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Fruit.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="ModuleInput.h" />
+    <ClInclude Include="ModuleRenderer.h" />
     <ClInclude Include="ModuleResources.h" />
     <ClInclude Include="ModuleWindow.h" />
   </ItemGroup>

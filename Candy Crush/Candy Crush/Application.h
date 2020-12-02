@@ -8,6 +8,7 @@
 class ModuleWindow;
 class ModuleResources;
 class ModuleInput;
+class ModuleRenderer;
 
 class Application {
 
@@ -28,6 +29,7 @@ public:
 	ModuleWindow* window = nullptr;
 	ModuleResources* resources = nullptr;
 	ModuleInput* input = nullptr;
+	ModuleRenderer* renderer = nullptr;
 
 private:
 	
