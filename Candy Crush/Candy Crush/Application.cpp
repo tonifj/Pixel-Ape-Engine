@@ -1,6 +1,7 @@
 //Modules
 #include "ModuleWindow.h"
 #include "ModuleResources.h"
+#include "ModuleInput.h"
 
 #include "Application.h"
 
@@ -9,7 +10,8 @@ Application::Application()
 {
 	modules.push_back(resources = new ModuleResources());
 	modules.push_back(window = new ModuleWindow());
-	
+	modules.push_back(input = new ModuleInput());
+
 }
 
 Application::~Application()
@@ -41,7 +43,7 @@ update_status Application::Update()
 	for (auto& module : modules)
 	{
 		update_status ret = module->PreUpdate();
-		if (ret == update_status::UPDATE_ERROR) {
+		if (ret == update_status::UPDATE_ERROR || ret == update_status::UPDATE_STOP) {
 			result = ret;
 		}
 	}
@@ -49,7 +51,7 @@ update_status Application::Update()
 	for (auto& module : modules)
 	{
 		update_status ret = module->Update();
-		if (ret == update_status::UPDATE_ERROR) {
+		if (ret == update_status::UPDATE_ERROR || ret == update_status::UPDATE_STOP) {
 			result = ret;
 		}
 	}
@@ -57,7 +59,7 @@ update_status Application::Update()
 	for (auto& module : modules)
 	{
 		update_status ret = module->PostUpdate();
-		if (ret == update_status::UPDATE_ERROR) {
+		if (ret == update_status::UPDATE_ERROR || ret == update_status::UPDATE_STOP) {
 			result = ret;
 		}
 	}

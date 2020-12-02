@@ -15,8 +15,8 @@ public:
 	bool CleanUp() override;
 
 
-//	SDL_Window* GetWindow();
-//	SDL_Surface* GetSurface();
+	SDL_Window* GetWindow();
+	SDL_Surface* GetSurface();
 
 
 private:

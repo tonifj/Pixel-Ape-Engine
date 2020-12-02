@@ -71,7 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)\include\SDL2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\lib\SDL2\x86;$(SolutionDir)\lib\SDL2\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)\lib\SDL2\x86;$(SolutionDir)\lib\SDL2\x64;$(SolutionDir)\lib\SDL_Image\x86;$(SolutionDir)\lib\SDL_Image\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(SolutionDir)\include\SDL2\include;$(IncludePath)</IncludePath>
@@ -85,7 +85,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ModuleInput.cpp" />
     <ClCompile Include="ModuleResources.cpp" />
     <ClCompile Include="ModuleWindow.cpp" />
   </ItemGroup>
@@ -137,6 +138,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Module.h" />
+    <ClInclude Include="ModuleInput.h" />
     <ClInclude Include="ModuleResources.h" />
     <ClInclude Include="ModuleWindow.h" />
   </ItemGroup>

@@ -6,7 +6,8 @@
 #include <string>
 
 enum class ResourceType {
-	BITMAP
+	BITMAP,
+	PNG
 };
 
 class ModuleResources : public Module {
@@ -23,12 +24,15 @@ public:
 
 	//Get images with format bitmap
 	SDL_Surface* GetBitmap(std::string id);
+	SDL_Surface* GetPNG(std::string id);
+
 	
 
 private:
 	 bool LoadResource(ResourceType type, std::string path, std::string id);
 
 	std::unordered_map<std::string, SDL_Surface*> bitmaps = {};
+	std::unordered_map<std::string, SDL_Surface*> pngs = {};
 
 };
 #endif

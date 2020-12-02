@@ -7,6 +7,7 @@
 #include <vector>
 class ModuleWindow;
 class ModuleResources;
+class ModuleInput;
 
 class Application {
 
@@ -26,6 +27,7 @@ public:
 
 	ModuleWindow* window = nullptr;
 	ModuleResources* resources = nullptr;
+	ModuleInput* input = nullptr;
 
 private:
 	

@@ -61,6 +61,7 @@ int main(int argc, char* argv[])
 
 			if (update_return == update_status::UPDATE_STOP)
 			{
+				cout << "Received Update_Stop" << endl;
 				state = MAIN_FINISH;
 			}
 				

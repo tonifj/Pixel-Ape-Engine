@@ -13,6 +13,9 @@
     <ClCompile Include="Application.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="ModuleInput.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Modules">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="Globals.h">
       <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleInput.h">
+      <Filter>Modules</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
