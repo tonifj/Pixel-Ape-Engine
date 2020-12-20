@@ -17,7 +17,8 @@ public:
 
 private:
 	SDL_Renderer* renderer = nullptr;
-
+	SDL_GLContext context;
+	bool show_demo_window = true;
 };
 
 #endif;

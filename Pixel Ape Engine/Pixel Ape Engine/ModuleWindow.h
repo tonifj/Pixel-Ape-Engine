@@ -18,7 +18,8 @@ public:
 	SDL_Window* GetWindow();
 	SDL_Surface* GetSurface();
 
-
+	unsigned width = 640;
+	unsigned height = 480;
 private:
 	//Create window where to render
 	SDL_Window* window = nullptr;
@@ -27,8 +28,7 @@ private:
 	SDL_Surface* window_surface = nullptr;
 
 	//Scren dimensions
-	unsigned width = 640;
-	unsigned height = 480;
+
 
 };
 

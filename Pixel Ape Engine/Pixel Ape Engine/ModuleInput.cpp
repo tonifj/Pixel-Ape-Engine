@@ -1,4 +1,7 @@
 #include "ModuleInput.h"
+#include "imgui.h"
+#include "imgui_impl_sdl.h"
+#include "imgui_impl_opengl3.h"
 
 
 using namespace std;
@@ -14,6 +17,8 @@ bool ModuleInput::Init()
 	cout << "Initializing Module Input..." << endl;
 	cout << "Module Input Initialized" << endl;
 
+	io = ImGui::GetIO(); 
+	(void)io;
 
 	return true;
 }

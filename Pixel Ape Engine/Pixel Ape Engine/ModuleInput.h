@@ -2,6 +2,9 @@
 #define _MODULEINPUT_H
 
 #include "Module.h"
+#include "imgui.h"
+#include "imgui_impl_sdl.h"
+#include "imgui_impl_opengl3.h"
 
 class ModuleInput : public Module {
 
@@ -14,6 +17,7 @@ public:
 	update_status PreUpdate() override;
 	update_status Update() override;
 	update_status PostUpdate() override;
+	ImGuiIO io;
 
 private:
 	bool quit = false;
